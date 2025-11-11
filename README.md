@@ -43,5 +43,3 @@ L’application extrait la bande sonore pour la transcrire, analyse les images p
 6. 🌐 Les résultats sont renvoyés via une **API FastAPI**.
 
 ---
-
-## 🧱 Structure du projet
