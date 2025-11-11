@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Résultat de l'analyse</title>
+  <style>
+    body {
+      background-color: #f3eeee;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #4caf50;
+      margin-bottom: 1rem;
+    }
+
+    pre {
+      background-color: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 10px;
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #4caf50;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2>📄 Votre vidéo racontée en mots</h2>
+  <pre id="result">Chargement...</pre>
+  <a href="index.html">⬅️ Retour</a>
+
+ <script>
+    const audio = localStorage.getItem("audio") || "Aucune transcription.";
+    const lastImageDescription = localStorage.getItem("last_image_description") || "Aucune description d'image.";
+const tt=`✅ Transcription audio :\n${audio}`
+    const resultText = `\n\n🖼️ Description finale d'image :\n${lastImageDescription}`;
+    document.getElementById("result").textContent = resultText;
+  </script>
+</body>
+</html>
